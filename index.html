@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>Victory Mitsubishi</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+      .icon-32 { font-size: 32px; }
+      .icon-36 { font-size: 36px; }
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      .scroll-down {
+        border: 2px solid white;
+        border-radius: 50px;
+        height: 40px;
+        width: 24px;
+        position: relative;
+      }
+      .scroll-down::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 8px;
+        background-color: white;
+        border-radius: 2px;
+        animation: scroll 2s infinite;
+      }
+      @keyframes scroll {
+        0% { opacity: 1; top: 8px; }
+        100% { opacity: 0; top: 20px; }
+      }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003060",
+                        "accent": "#E60012",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#191919",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body { min-height: 100dvh; }
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm shadow-lg border-b border-white/10">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<a href="/" aria-label="Homepage" class="flex items-center gap-2">
+<img alt="Victory Mitsubishi Logo" class="h-20 md:h-24" src="assets/logo.png" />
+<span class="text-primary dark:text-white font-bold text-lg md:text-xl">VICTORY MITSUBISHI</span>
+</a>
+<div class="flex items-center gap-4">
+<button id="mobile-menu-button" class="md:hidden" aria-label="Open menu">
+<span class="material-symbols-outlined text-primary dark:text-white">
+                    menu
+                </span>
+</button>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary dark:text-white font-semibold transition-colors hover:text-accent" href="https://www.victorymitsubishi.com/new-vehicles/" target="_blank">New Vehicles</a>
+<a class="text-primary dark:text-white font-semibold transition-colors hover:text-accent" href="https://www.victorymitsubishi.com/used-vehicles/" target="_blank">Used Vehicles</a>
+<a class="text-primary dark:text-white font-semibold transition-colors hover:text-accent" href="https://www.victorymitsubishi.com/finance/apply-for-financing/" target="_blank">Financing</a>
+<a class="text-primary dark:text-white font-semibold transition-colors hover:text-accent" href="https://www.victorymitsubishi.com/contact-us/" target="_blank">Service</a>
+<a class="text-primary dark:text-white font-semibold transition-colors hover:text-accent" href="https://www.victorymitsubishi.com/why-buy-from-victory-mitsubishi/" target="_blank">About Us</a>
+</nav>
+<button id="theme-toggle" class="hidden md:flex items-center justify-center w-10 h-10 rounded-full text-primary dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
+<span id="theme-toggle-dark-icon" class="material-symbols-outlined hidden">dark_mode</span>
+<span id="theme-toggle-light-icon" class="material-symbols-outlined hidden">light_mode</span>
+</button>
+</div>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 flex -translate-x-full flex-col bg-background-light p-4 dark:bg-background-dark md:hidden">
+<div class="flex justify-end">
+<button id="close-menu-button" aria-label="Close menu">
+<span class="material-symbols-outlined text-3xl text-primary dark:text-white">close</span>
+</button>
+</div>
+<nav class="flex h-full flex-col items-center justify-center gap-8">
+<a class="text-2xl font-bold text-primary dark:text-white" href="https://www.victorymitsubishi.com/new-vehicles/" target="_blank">New Vehicles</a>
+<a class="text-2xl font-bold text-primary dark:text-white" href="https://www.victorymitsubishi.com/used-vehicles/" target="_blank">Used Vehicles</a>
+<a class="text-2xl font-bold text-primary dark:text-white" href="https://www.victorymitsubishi.com/finance/apply-for-financing/" target="_blank">Financing</a>
+<a class="text-2xl font-bold text-primary dark:text-white" href="https://www.victorymitsubishi.com/contact-us/" target="_blank">Service</a>
+<a class="text-2xl font-bold text-primary dark:text-white" href="https://www.victorymitsubishi.com/why-buy-from-victory-mitsubishi/" target="_blank">About Us</a>
+</nav>
+</div>
+</div>
+</header>
+<main>
+<section class="relative h-screen w-full overflow-hidden">
+<!-- Video Background -->
+<video autoplay loop muted playsinline class="absolute top-0 left-0 z-0 h-full w-full object-cover" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuClOC4ELmx89c-N0zamQHtCg-bvvgL2ukd0utsoMKl8cK85lLd5oPiS0cazPj4nhxON0QM2Wqqouphx1AWVAcydZeAmQBNRFf43n2Ucmi62dusOz8AtaRDfIMOfnM0owZah150jUYt-u0MV7VuEGHDBsbq4_q4vdtzxNgQZQx-U0k-HNFK5S7RJNFNTGuCJ-VVa1R_l81HkxRe71YDmnb309jX3npTI72VKNqoQ2xxreKJKdPe3V8rB5iN1ovU4TaarXC0GS3-fsfYO">
+<source src="assets/victory3.mp4" type="video/mp4" />
+<!-- <source src="assets/victory2.mp4" type="video/mp4" /> -->
+</video>
+<!-- Knockout Content Layer -->
+<div class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black p-4 text-center text-white mix-blend-multiply">
+<div class="flex flex-grow flex-col items-center justify-center">
+<h1 style="font-size: clamp(6rem, 12vw, 16rem); font-weight: 900; text-transform: uppercase;" class="leading-tight tracking-tighter">
+                                Victory
+                            </h1>
+<p class="text-xl md:text-2xl font-light uppercase tracking-wider mt-4">
+                                Easy Approvals, Low Down Payments, Elite Brands
+                            </p>
+</div>
+<div class="pb-8">
+<div class="flex flex-wrap justify-center gap-4">
+<a role="button" class="group flex h-12 min-w-[120px] items-center justify-center gap-2 rounded-lg bg-white px-8 text-base font-bold text-black transition-transform duration-300 hover:scale-105" href="https://www.victorymitsubishi.com/new-vehicles/" target="_blank">
+<span class="truncate">Shop New</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a role="button" class="group flex h-12 min-w-[120px] items-center justify-center rounded-lg border border-white bg-transparent px-8 text-base font-bold text-white transition-all duration-300 hover:bg-white/20 hover:scale-105" href="https://www.victorymitsubishi.com/used-vehicles/" target="_blank">
+<span class="truncate">Browse Used</span>
+</a>
+</div>
+<div class="scroll-down mx-auto mt-16 hidden md:block"></div>
+</div>
+</div>
+</section>
+
+<section class="bg-background-light px-4 py-16 dark:bg-background-dark @container md:py-24">
+<div class="mx-auto max-w-5xl">
+<div class="flex flex-col gap-4 text-center">
+<h2 class="mx-auto max-w-3xl text-3xl font-bold leading-tight tracking-tight text-primary dark:text-white md:text-4xl">
+                        Why Choose Victory Mitsubishi?
+                    </h2>
+<p class="mx-auto max-w-3xl text-base leading-relaxed text-gray-600 dark:text-gray-300 md:text-lg">
+                        We offer a wide selection of new and used vehicles, competitive financing, and a state-of-the-art service center to serve you better.
+                    </p>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+<div class="group flex flex-col items-center gap-4 rounded-xl border border-gray-200/80 bg-white/50 p-8 text-center shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-gray-300/80 dark:border-gray-700/50 dark:bg-primary/10 dark:hover:border-gray-600/80 dark:hover:bg-primary/20">
+<div class="rounded-full bg-accent/10 p-4 text-accent transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined icon-32">directions_car</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-xl font-bold leading-tight text-primary dark:text-white">New Vehicles</h3>
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Explore the latest Mitsubishi models.</p>
+</div>
+</div>
+<div class="group flex flex-col items-center gap-4 rounded-xl border border-gray-200/80 bg-white/50 p-8 text-center shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-gray-300/80 dark:border-gray-700/50 dark:bg-primary/10 dark:hover:border-gray-600/80 dark:hover:bg-primary/20">
+<div class="rounded-full bg-accent/10 p-4 text-accent transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined icon-32">sell</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-xl font-bold leading-tight text-primary dark:text-white">Used Vehicles</h3>
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Find a reliable and affordable used car.</p>
+</div>
+</div>
+<div class="group flex flex-col items-center gap-4 rounded-xl border border-gray-200/80 bg-white/50 p-8 text-center shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-gray-300/80 dark:border-gray-700/50 dark:bg-primary/10 dark:hover:border-gray-600/80 dark:hover:bg-primary/20">
+<div class="rounded-full bg-accent/10 p-4 text-accent transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined icon-32">account_balance_wallet</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-xl font-bold leading-tight text-primary dark:text-white">Financing</h3>
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Get pre-approved for a loan in minutes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary/90 py-8 dark:bg-primary/50 md:py-12">
+<div class="container mx-auto px-4 text-center">
+<h2 class="mb-6 text-xl font-bold text-white md:text-2xl">Get In Touch</h2>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="group flex items-center gap-3 rounded-lg p-3 text-white transition-all duration-300 hover:bg-white/10" href="tel:347-708-8392">
+<span class="material-symbols-outlined text-3xl transition-transform duration-300 group-hover:scale-110">call</span>
+<span class="text-base md:text-lg font-semibold">347-708-8392</span>
+</a>
+<a class="group flex items-center gap-3 rounded-lg p-3 text-white transition-all duration-300 hover:bg-white/10" href="mailto:sales@victorymitsubishi.com">
+<span class="material-symbols-outlined text-3xl transition-transform duration-300 group-hover:scale-110">email</span>
+<span class="text-base md:text-lg font-semibold">sales@victorymitsubishi.com</span>
+</a>
+<a class="group flex items-center gap-3 rounded-lg p-3 text-white transition-all duration-300 hover:bg-white/10" href="https://www.google.com/maps/search/?api=1&query=4070+Boston+Road,+Bronx,+NY+10475" target="_blank">
+<span class="material-symbols-outlined text-3xl transition-transform duration-300 group-hover:scale-110">location_on</span>
+<span class="text-base md:text-lg font-semibold">4070 Boston Road, Bronx, NY 10475</span>
+</a>
+</div>
+</div>
+</section>
+<section class="bg-background-light px-4 py-16 dark:bg-background-dark @container md:py-24">
+<div class="container mx-auto max-w-6xl">
+<div class="flex flex-col gap-6 text-center">
+<h2 class="text-3xl font-bold leading-tight tracking-tight text-primary dark:text-white md:text-4xl">
+                        Visit Our Location
+                    </h2>
+<p class="mx-auto max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-300 md:text-lg">
+                        Come visit us at Victory Mitsubishi and Pre-Owned Super Center. Get directions and find us easily with our interactive map.
+                    </p>
+</div>
+<div class="mt-12">
+<div class="relative w-full overflow-hidden rounded-xl shadow-xl md:rounded-2xl" style="aspect-ratio: 16/9;">
+<iframe class="absolute top-0 left-0 h-full w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.2578336139295!2d-73.82921838433423!3d40.80985843494528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28a9c4ac37dfb%3A0xfd8984ec92bb615b!2sVictory%20Mitsubishi%20and%20Pre-Owned%20Super%20Center!5e0!3m2!1sen!2sus!4v1692578521!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Victory Mitsubishi Location Map"></iframe>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="flex flex-col gap-8 bg-background-light px-5 py-10 text-center dark:bg-background-dark @container">
+<div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row">
+<a class="min-w-40 text-base font-normal leading-normal text-gray-600 dark:text-gray-400" href="https://www.victorymitsubishi.com/why-buy-from-victory-mitsubishi/" target="_blank">About Us</a>
+<a class="min-w-40 text-base font-normal leading-normal text-gray-600 dark:text-gray-400" href="https://www.victorymitsubishi.com/contact-us/" target="_blank">Contact Us</a>
+<a class="min-w-40 text-base font-normal leading-normal text-gray-600 dark:text-gray-400" href="https://www.victorymitsubishi.com/privacy-policy/" target="_blank">Privacy Policy</a>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="text-gray-500 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://www.facebook.com/VictoryMitsubishi/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-gray-500 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://twitter.com/victorymits" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-gray-500 transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://www.instagram.com/victorymitsubishi/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.465c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0-2a7 7 0 110 14 7 7 0 010-14zm4.5-1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">© 2024 Victory Mitsubishi. All Rights Reserved.</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const openMenu = () => {
+            mobileMenu.classList.remove('-translate-x-full');
+        };
+
+        const closeMenu = () => {
+            mobileMenu.classList.add('-translate-x-full');
+        };
+
+        mobileMenuButton.addEventListener('click', openMenu);
+        closeMenuButton.addEventListener('click', closeMenu);
+
+        // Dark Mode Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Change the icons inside the button based on previous settings
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            // toggle icons inside button
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // if set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('color-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            } else {
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('color-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            }
+        });
+    });
+</script>
+</body></html>
